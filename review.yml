@@ -1,0 +1,89 @@
+aid: fnb-corp
+name: F.N.B. Corporation
+review:
+  question: Does F.N.B. Corporation expose a first-party public developer API or portal?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: >-
+    F.N.B. Corporation (NYSE: FNB), the Pittsburgh-based ~$50B regional bank
+    holding company behind First National Bank of Pennsylvania, publishes NO
+    first-party public developer portal, API reference, or downloadable
+    OpenAPI/Swagger specification. Infrastructure probing confirms the absence:
+    the developer.fnb-online.com, developers.fnb-online.com and
+    api.fnb-online.com subdomains each return HTTP 301 redirects to the
+    marketing homepage (https://www.fnb-online.com/), and the on-site paths
+    /developers, /developer and /api all return HTTP 404. There is no OAuth2,
+    OIDC, API-key or mTLS developer authentication surface to document because
+    no API is exposed. Consumer-permissioned account, balance and transaction
+    data for First National Bank of Pennsylvania is reachable only through
+    third-party data aggregators (notably Plaid, which builds to FDX standards),
+    not via a first-party FNB API. No direct Financial Data Exchange (FDX)
+    membership and no public CFPB Section 1033 personal-financial-data-rights
+    posture is documented by the institution itself as of the review date. This
+    aggregator-only reality is the honest, typical posture for a U.S. regional
+    bank, where open finance participates on the aggregator side rather than
+    through a bank-published API contract.
+  posture:
+    firstPartyDeveloperPortal: false
+    developerPortalURL: null
+    downloadableSpec: false
+    specProvenance: none
+    authModel: none-documented
+    fdxParticipant: false
+    section1033Posture: none-documented
+    aggregatorAccess: true
+    aggregators:
+    - Plaid
+  transports:
+  - protocol: REST
+    scheme: https
+    documented: false
+    note: No first-party REST API is documented by F.N.B. Corporation.
+  - protocol: FDX
+    scheme: https
+    documented: false
+    note: >-
+      No FNB-published FDX data-access API. FDX-aligned access exists only
+      indirectly through aggregators such as Plaid Core Exchange.
+  probes:
+  - url: https://developer.fnb-online.com
+    status: 301
+    note: Redirects to https://www.fnb-online.com/ — no developer subdomain.
+  - url: https://developers.fnb-online.com
+    status: 301
+    note: Redirects to https://www.fnb-online.com/ — no developer subdomain.
+  - url: https://api.fnb-online.com
+    status: 301
+    note: Redirects to https://www.fnb-online.com/ — no API subdomain.
+  - url: https://www.fnb-online.com/developers
+    status: 404
+    note: No developer documentation path.
+  - url: https://www.fnb-online.com/api
+    status: 404
+    note: No API documentation path.
+  - url: https://www.fnb-online.com/
+    status: 200
+    note: Live corporate/marketing site; no developer or API content.
+  - url: https://plaid.com/institutions/fnb/
+    status: 200
+    note: Third-party aggregator (Plaid) coverage page for FNB — Assets, Balance, Transactions.
+sources:
+- url: https://www.fnb-online.com/about-us
+  type: Website
+  note: 'Confirms NYSE: FNB, Pittsburgh HQ, First National Bank of Pennsylvania (FDIC-insured); no API/open-banking mention.'
+- url: https://plaid.com/institutions/fnb/
+  type: Documentation
+  note: Aggregator access path for FNB consumer data (Plaid) — the only documented programmatic access.
+- url: https://businessjournaldaily.com/fnb-reports-total-assets-of-50b-in-2025/
+  type: Reference
+  note: FNB reported ~$50B total assets for 2025 (regional-bank scale).
+actions:
+  apisYmlUpdated: true
+  openapiHarvested: false
+  reason: >-
+    No public API surface or downloadable specification exists to harvest.
+    apis.yml records an honest identity-only profile with a single
+    aggregator-only data-access pointer; no OpenAPI was created because none is
+    published and none may be fabricated.
