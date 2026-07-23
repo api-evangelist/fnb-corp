@@ -50,6 +50,8 @@ apis:
   - type: Documentation
     url: https://plaid.com/institutions/fnb/
 common:
+- type: DomainSecurity
+  url: security/fnb-corp-domain-security.yml
 - type: Website
   url: https://www.fnb-online.com/
 - type: PrivacyPolicy
@@ -60,6 +62,8 @@ common:
   url: https://www.fnb-online.com/contact-us
 - type: LinkedIn
   url: https://www.linkedin.com/company/f-n-b--corporation
+- type: LLMsTxt
+  url: llms/fnb-corp-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

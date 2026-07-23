@@ -1,0 +1,24 @@
+# F.N.B. Corporation
+
+> F.N.B. Corporation (NYSE: FNB) is a diversified financial services holding company headquartered in Pittsburgh, Pennsylvania, and the parent of First National Bank of Pennsylvania, an FDIC-insured, state-chartered commercial bank (~$50B total assets, ~350 branches across seven states and Washington, D.C.). F.N.B. publishes NO first-party public developer portal or documented API. Consumer-permissioned account, balance and transaction data is reachable only through third-party data aggregators (notably Plaid, which builds to Financial Data Exchange (FDX) standards), not a first-party FNB API surface.
+
+## APIs
+
+- [FNB Consumer Data Access (Aggregator-Only)](https://plaid.com/institutions/fnb/): No first-party FNB API. Consumer-permissioned data for First National Bank of Pennsylvania is available only via third-party aggregators such as Plaid.
+
+## Company
+
+- [Website](https://www.fnb-online.com/): F.N.B. Corporation corporate and marketing site.
+- [About Us](https://www.fnb-online.com/about-us): Company overview, NYSE: FNB, Pittsburgh HQ, First National Bank of Pennsylvania.
+- [Support / Contact](https://www.fnb-online.com/contact-us): Customer contact channels.
+
+## Policies
+
+- [Privacy Policy](https://www.fnb-online.com/privacy)
+- [Terms of Use](https://www.fnb-online.com/terms-of-use)
+
+## Notes
+
+- No first-party developer portal, API reference, or downloadable OpenAPI/Swagger specification is published by F.N.B. Corporation.
+- developer/developers/api subdomains of fnb-online.com redirect (HTTP 301) to the marketing homepage; /developers, /developer and /api paths return HTTP 404.
+- No direct Financial Data Exchange (FDX) membership and no public CFPB Section 1033 posture is documented by the institution as of this profile.
