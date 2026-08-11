@@ -18,6 +18,17 @@ description: >-
   third-party aggregators (notably Plaid), not a first-party FNB API. No direct
   Financial Data Exchange (FDX) membership or public CFPB Section 1033 posture
   is documented by the institution as of this profile.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-11'
+  method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Financial Services
