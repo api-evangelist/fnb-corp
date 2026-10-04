@@ -43,14 +43,13 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - United States
 - Regional Bank
 - Consumer Banking
 - Commercial Banking
 - Wealth Management
-- Data Aggregation
 - Open Finance
 tags_raw:
 - Financial Services
@@ -60,8 +59,8 @@ tags_raw:
 - Consumer Banking
 - Commercial Banking
 - Wealth Management
-- Data Aggregation
 - Open Finance
+- Financial-Services
 created: '2026-07-23'
 modified: '2026-07-23'
 specificationVersion: '0.23'
@@ -102,3 +101,5 @@ common:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-tags-removed:
+- Data Aggregation
