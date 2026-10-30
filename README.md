@@ -1,4 +1,4 @@
-# F.N.B. Corporation (fnb-corp)
+# F.N.B. Corporation
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,65 +64,87 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-F.N.B. Corporation (NYSE: FNB) is a diversified financial services holding company headquartered in Pittsburgh, Pennsylvania, and the parent of First National Bank of Pennsylvania, an FDIC-insured, state-chartered commercial bank. With roughly $50 billion in total assets at year-end 2025, FNB is a regional super-community bank operating around 350 branches across seven states and Washington, D.C., offering commercial banking, consumer banking and wealth management through its eStore digital platform.
+F.N.B. Corporation (NYSE: FNB) is a diversified financial services holding company headquartered in Pittsburgh, Pennsylvania, and the parent of First National Bank of Pennsylvania, an FDIC-insured, state-chartered commercial bank. With roughly $50 billion in total assets at year-end 2025, FNB is a regional super-community bank operating around 350 branches across seven states and Washington, D.C. (Pennsylvania, Ohio, Maryland, West Virginia, North Carolina, South Carolina and Virginia), offering commercial banking, consumer banking and wealth management through its eStore digital platform. On open finance, FNB exposes NO first-party public developer portal or documented API: the developer/api subdomains of fnb-online.com redirect to the marketing homepage and no developer documentation is published. Consumer-permissioned account and transaction data is reachable only through third-party aggregators (notably Plaid), not a first-party FNB API. No direct Financial Data Exchange (FDX) membership or public CFPB Section 1033 posture is documented by the institution as of this profile.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/fnb-corp/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/fnb-corp/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · United States · Regional Bank · Consumer Banking · Commercial Banking · Wealth Management · Open Finance
 
-## Open Finance / API Posture
+## F.N.B. Corporation on APIs.io
 
-F.N.B. Corporation exposes **no first-party public developer portal or documented API**. Probing the institution's infrastructure confirms this:
+Everything profiled for F.N.B. Corporation is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/fnb-corp/](https://apis.io/providers/fnb-corp/)** — or go straight to one of the APIs or properties below.
 
-- `developer.fnb-online.com`, `developers.fnb-online.com`, and `api.fnb-online.com` all return **HTTP 301 redirects to the marketing homepage** (`https://www.fnb-online.com/`) — there is no dedicated developer subdomain.
-- `www.fnb-online.com/developers`, `/developer`, and `/api` all return **HTTP 404** — no developer documentation is published.
+### APIs (1)
 
-Consumer-permissioned account, balance and transaction data for First National Bank of Pennsylvania is reachable **only through third-party data aggregators** (notably [Plaid](https://plaid.com/institutions/fnb/)), which build to Financial Data Exchange (FDX) standards. No direct FDX membership or public CFPB Section 1033 data-access posture is documented by the institution itself as of this profile.
+- [FNB Consumer Data Access (Aggregator-Only)](https://apis.io/apis/fnb-corp/fnb-aggregator-data-access/) — F.N.B. Corporation publishes no first-party developer API. Consumer-permissioned account, balance and transaction data for First National Bank of…
 
-This is the honest, common posture for a U.S. regional bank: open finance participation happens on the aggregator side, not via a first-party bank API.
+### Published properties
 
-## Tags
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- Financial Services
-- Banking
-- United States
-- Regional Bank
-- Consumer Banking
-- Commercial Banking
-- Wealth Management
-- Data Aggregation
-- Open Finance
+#### Security (1)
 
-## Timestamps
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+- [Fnb Corp Domain Security](https://apis.io/security/fnb-corp/fnb-corp-domain-security/)
 
-## APIs
+## Where to find this API
 
-### FNB Consumer Data Access (Aggregator-Only)
-
-F.N.B. Corporation publishes no first-party developer API. Consumer-permissioned data for First National Bank of Pennsylvania is available only through third-party aggregators such as Plaid. This is an honest pointer to that aggregator access path, not a first-party FNB API surface.
-
-- **Human URL:** [https://plaid.com/institutions/fnb/](https://plaid.com/institutions/fnb/)
-
-#### Tags
-
-- Data Aggregation
-- Open Finance
-- Consumer Banking
-
-#### Properties
-
-- [Documentation](https://plaid.com/institutions/fnb/)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.fnb-online.com/)
-- [Privacy Policy](https://www.fnb-online.com/privacy)
-- [Terms of Service](https://www.fnb-online.com/terms-of-use)
 - [Support](https://www.fnb-online.com/contact-us)
-- [LinkedIn](https://www.linkedin.com/company/f-n-b--corporation)
+- [Blog](https://www.fnb-online.com/about-us/newsroom)
+- [Terms of service](https://www.fnb-online.com/terms-of-use)
+- [Privacy policy](https://www.fnb-online.com/privacy)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 13.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 27.6 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.0** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/fnb-corp/](https://apis.io/providers/fnb-corp/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for F.N.B. Corporation: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/fnb-corp/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
